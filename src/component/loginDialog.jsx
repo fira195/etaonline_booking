@@ -51,9 +51,6 @@ export default function LoginDialog() {
 
   return (
     <React.Fragment>
-      <Button variant="outlined" onClick={handleClickOpen}>
-        Open Login Dialog
-      </Button>
       <Dialog open={open} onClose={handleClose}>
         <DialogTitle style={{ textAlign: "center" , fontWeight: 'bold', fontSize: 30}}>Login</DialogTitle>
         <DialogContent>
@@ -110,9 +107,14 @@ export default function LoginDialog() {
                   </Field>
 
                   <DialogActions style={{ justifyContent: "center"}}>
+                    <div style={{display: 'flex', gap:10, flexDirection: 'column', width: '100%'}}>
                     <Button fullWidth type="submit" variant="contained" color="primary">
                       Login
                     </Button>
+                    <Button fullWidth type="submit" variant="outlined" color="primary">
+                      Google
+                    </Button>
+                    </div>
                   </DialogActions>
                 </Box>
               </div>
